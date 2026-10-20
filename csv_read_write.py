@@ -15,9 +15,9 @@ def csv_write():
 
         writer.writerow([model, wynik, czas])
 
-def csv_read(fileName):
+def csv_read(file_name):
     sum = 0
-    with open(fileName, 'r') as file:
+    with open(file_name, 'r') as file:
         reader = csv.reader(file)
         for row in reader:
             model = row[0]
