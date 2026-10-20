@@ -25,7 +25,7 @@ def create_parser():
 
     parser.add_argument('--months', nargs='+', choices=_MONTHS, required=True,
                         help='Months of our interest.')
-    parser.add_argument('--days', nargs='+', choices=_DAYS, required=True, type=validate_days_range,
+    parser.add_argument('--days', nargs='+', required=True, type=validate_days_range,
                         help='Weekdays range of our interest. One weekdays range per month.')
     parser.add_argument('--times', nargs='+', required=False,
                         help='Times of day of our interest. One time of day per day.')
