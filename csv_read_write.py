@@ -1,14 +1,12 @@
 import csv
 import random
 
-def csv_write():
-    with open('Dane.csv', 'w', newline='', encoding='utf-8') as file:
+def csv_write(file_name='Dane.csv'):
+    with open(file_name, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=';')
-
         writer.writerow(['Model', ' Wynik', ' Czas', ' '])
 
         modelOptions = ['A', 'B', 'C']
-
         model = random.choice(modelOptions)
         wynik = f"{random.randint(0, 1000)}"
         czas = f"{random.randint(0, 1000)}s"
